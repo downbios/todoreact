@@ -1,46 +1,17 @@
-# Getting Started with Create React App
+React: Componentes Funcionais e Hooks 🚀
+Conhecimentos Aprendidos
+Nesta aula sobre React componentes funcionais e hooks, foram abordados os seguintes pontos:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Método Principal
+useState: Utilizado para gerenciar o estado do componente funcional.
+useState: Define e atualiza o estado taskTitle para controlar o valor do input.
+useState: Mantém e atualiza o estado tasks para armazenar as tarefas adicionadas.
+handleSubmitAddTask: Função que lida com a submissão do formulário para adicionar tarefas.
+Com estes conceitos, foi possível criar um aplicativo de lista de tarefas interativo e dinâmico utilizando React e TypeScript, demonstrando o uso de componentes funcionais e hooks para gerenciar o estado da aplicação. 🌟
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Tecnologias Utilizadas
+React (^18.2.0): Framework JavaScript para criação de interfaces de usuário.
+React-DOM (^18.2.0): Renderização de elementos React no navegador.
+TypeScript (^4.9.5): Linguagem que adiciona tipagem estática ao JavaScript.
+Sass (^1.75.0): Pré-processador CSS para estilização.
+Web Vitals (^2.1.4): Biblioteca para medir a qualidade da experiência do usuário na web.
