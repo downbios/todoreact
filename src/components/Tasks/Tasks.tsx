@@ -1,15 +1,11 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useContext, useState } from "react";
 import css from "./tasks.module.scss";
-
-interface Task {
-  title: string;
-  done: boolean;
-  id: number;
-}
+import { TasksContext } from "../../context/TasksContext";
 
 export const Tasks: React.FC = () => {
   const [taskTitle, setTaskTitle] = useState("");
-  const [tasks, setTasks] = useState([] as Task[]);
+
+  const { tasks, setTasks } = useContext(TasksContext);
 
   function handleSubmitAddTask(event: FormEvent) {
     event.preventDefault();
@@ -18,11 +14,30 @@ export const Tasks: React.FC = () => {
       alert("tamanho da tarefa não permitido");
       return;
     }
-    setTasks([
+
+    const newTasks = [
       ...tasks,
       { id: new Date().getTime(), title: taskTitle, done: false },
-    ]);
+    ];
+
+    setTasks(newTasks);
+    localStorage.setItem("tasks", JSON.stringify(newTasks));
     setTaskTitle("");
+  }
+
+  function handleToogleTaskStatus(taskId: Number) {
+    const newTasks = tasks.map((task) => {
+      if (taskId === task.id) {
+        return {
+          ...task,
+          done: !task.done,
+        };
+      }
+
+      return task;
+    });
+
+    setTasks(newTasks);
   }
 
   return (
@@ -44,7 +59,11 @@ export const Tasks: React.FC = () => {
         {tasks.map((task) => {
           return (
             <li key={task.id}>
-              <input type="checkbox" id={`task-${task.id}`} />
+              <input
+                type="checkbox"
+                id={`task-${task.id}`}
+                onChange={() => handleToogleTaskStatus(task.id)}
+              />
               <label htmlFor={`task-${task.id}`}>{task.title}</label>
             </li>
           );
